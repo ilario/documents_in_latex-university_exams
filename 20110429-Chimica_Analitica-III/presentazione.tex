@@ -1,0 +1,44 @@
+\documentclass{beamer}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{default}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage[version=3]{mhchem}
+
+
+
+\usetheme{AnnArbor}        % layout complessivo. 
+\useinnertheme{default} % layout interno.
+\useoutertheme{default} % layout esterno.
+\usecolortheme{beaver} % schema di colori.
+\usefonttheme{default}  % schema dei font.
+
+\AtBeginSection[]{\frame{ \tableofcontents[current,hideothersubsections]}}
+\newcommand{\diapo}[1]{\subsection{#1}\begin{frame}\frametitle{#1}}
+\setbeamercovered{dynamic}
+
+\title{Analisi di diossine nel terreno}
+\subtitle{Studio di due metodi}
+\author{Ilario Gelmetti}
+\institute{Dipartimento di Chimica e Chimica Industriale - Università di Pisa}
+%\date{}
+\logo{\includegraphics[width=0.1\paperwidth]{img/unipilogo.jpg}}
+
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\institute{DCCI - UniPi}
+
+\input{sec/intro.tex}
+\input{sec/primo.tex}
+\input{sec/secondo.tex}
+
+\bibliographystyle{unsrt}
+\bibliography{analitica3.bib}
+
+
+\end{document}

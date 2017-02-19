@@ -1,0 +1,33 @@
+\section{Complessi di Rutenio fotosensibilizzatori} %tra i reagenti ed i prodottidifferenza
+Per far avvenire la Reazione \ref{eq:totale} deve essere fornita dell'energia chimica che può essere ottenuta assorbendo l'energia luminosa e convertendola. Questo è il compito del fotosensibilizzatore o antenna o \emph{Light Harvesting Complex} (LHC). In letteratura si trovano riportati esempi di fotosensibilizzatori molecolari costituiti da Ru(II) con leganti eteroaromatici contenenti azoto.
+
+\subsection{Il fotosensibilizzatore \ce{[Ru(bpy)3]^2+}}
+Il complesso di rutenio comunemente utilizzato come fotosensibilizzatore è il \ce{[Ru(bpy)3]^2+} (bpy = 2,2'-bipiridina) riportato in \ref{fig:rubpy3}. 
+\begin{figure}
+\centering{\includegraphics[width=0.4\textwidth]{img/rubpy3.png}}
+\caption{\footnotesize{Il complesso fotoassorbitore \ce{[Ru(bpy)3]2+}.}
+\label{fig:rubpy3}}
+\end{figure}
+\paragraph{Il meccanismo.}Questo assorbe la luce con lunghezza d'onda 452nm per dare uno stato eccitato di singoletto $^1$\ce{\{[Ru(bpy)3]^2+\}}* risultante da un trasferimento di un elettrone dal centro Ru(II) all'orbitale $\pi *$ del legante bpy. Perciò lo stato eccitato può essere considerato \ce{[Ru(III)(bpy)2(bpy^-)]^2+}. Lo stato di singoletto decade velocemente tramite \emph{inter system crossing} ad uno stato eccitato di tripletto il cui tempo di vita media in acqua a 298K è di 600ns, abbastanza lungo perché possano avvenire processi redox\footnote{uno dei colli di bottiglia nello schema generale è il trasferimento di carica tra questa forma eccitata e il classico ma lento catalizzatore dell'ossidazione \ce{IrO2}; come vedremo nel Capitolo \ref{sec:oxcat} questo problema è minore nel caso di alcuni catalizzatori al rutenio}. I potenziali di riduzione mostrati in \ref{fig:ruISC} mostrano che lo stato eccitato $^3$\ce{\{[Ru(bpy)3]^2+\}}* è sia un miglior ossidante che un miglior riducente rispetto allo stato fondamentale di \ce{[Ru(bpy)3]^2+}.
+\begin{figure}
+\centering{\includegraphics[width=0.8\textwidth]{img/ruISC.png}}
+\caption{\footnotesize{Il \ce{[Ru(bpy)3]2+} (che è uno statoo di singoletto $d^6$ basso spin) assorbe la luce per dare uno stato eccitato che decade rapidamente ad uno stato eccitato più stabile, $^3$\ce{\{[Ru(bpy)3]^2+\}}*. Questo stato può decadere per emissione o può dare trasferimento di un elettrone.}
+\label{fig:ruISC}}
+\end{figure}
+\paragraph{La funzione.}
+In soluzione neutra l'acqua può essere ossidata o ridotta dal complesso eccitato. In pratica il sistema funziona solo in presenza di un catalizzatore (ridcat in \ref{fig:schemagenerale}) che funge da \emph{quenching agent} nei confronti del fotosensibilizzatore per poi ridurre l'idrogeno dell'acqua ed in presenza di un donatore di elettroni che può essere sacrificale (ad esempio \ce{[EDTA]^4-}) o può essere l'ossigeno dell'acqua (tramite un catalizzatore di ossidazione oxcat in \ref{fig:schemagenerale}).
+
+Il complesso di Ru(II) viene stabilizzato da leganti \ce{PR3} (accettori $\pi$) oppure viene utilizzato come \ce{[Ru(bpy)3](PF6)2}.
+
+\subsection{Il fotosensibilizzatore  [\ce{Ru}\{($\mu$-\ce{dpp)Ru(bpy)}$_2$\}$_3]^{8+}$. }\label{sec:fotos}
+Il principale problema dell'assorbitore e sensibilizzatore \ce{[Ru(bpy)3]^2+} è il fatto di assorbire solo la luce con $\lambda > 550$nm con un picco a 452nm per via dell'alta energia del trasferimento di carica metallo-legante (MLCT). 
+\begin{figure}
+\centering{\includegraphics[width=0.35\textwidth]{img/rudpprubpy.pdf}}
+\caption{\footnotesize{Il \ce{[Ru\{(\mu-dpp)Ru(bpy)2\}3]^8+} (dpp = 2,3-bis(2'-piridil)pirazina; bpy = 2,2'-bipiridina).}
+\label{fig:rudpprubpy}}
+\end{figure}
+
+Per sfruttare una maggiore porzione dello spettro solare sono stati sviluppati dendrimeri di Ru(II) multinucleari basati su leganti a ponte 2,3-bis(2'-piridil)pirazina (ddp) risultati efficienti assorbitori di luce. Questi, rispetto al \ce{[Ru(bpy)3]^2+}, hanno assorbitività molari molto maggiori (a causa del maggiore numero di transizioni MLCT) e soprattutto l'estensione dell'assorbimento alla porzione rossa dello spettro solare fino a 700nm. Misure di attività nel tempo mostrano che il fotosensibilizzatore non viene degradato dall'ambiente. Si può prevedere anche una differenza di velocità di trasferimento elettronico dal catalizzatore di ossidazione osservando i potenziali di ossidazione di \ce{[Ru(bpy)3]^2+} e di \ce{[Ru\{(\mu-dpp)}\-\ce{Ru(bpy)2\}3]^8+} (rispettivamente di +1.26V vs SCE\footnote{SCE = Elettrodo a Calomelano saturo} e 1.55 V vs SCE da cui, assumendo di essere nella regione normale di Marcus per il trasferimento elettronico, si ottiene una velocità di donazione di lacune maggiore per il secondo complesso)\cite{redoxrate}\cite{2010}\cite{2009fotos}\label{Marcus}. 
+
+
+

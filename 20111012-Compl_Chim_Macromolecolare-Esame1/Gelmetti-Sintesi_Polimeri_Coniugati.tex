@@ -1,0 +1,50 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}%uso utf8 invece di utf8x per poter mettere gli accenti nel titolo del pdf. Questo mi crea problemi con i °
+\usepackage{default}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage{multicol}
+\renewcommand{\thefootnote}{}%elimina il numerino della nota a piè di pagina
+\renewcommand\footnoterule{}%elimina la riga prima della nota a piè di pagina
+
+\usetheme{Warsaw}        % layout complessivo. 
+\useinnertheme{default} % layout interno.
+\useoutertheme{default} % layout esterno.
+\usecolortheme{wolverine} % schema di colori.
+\usefonttheme{default}  % schema dei font.
+
+\hypersetup{pdfauthor={Ilario Gelmetti},pdfsubject={Polimeri coniugati per applicazioni fotovoltaiche},pdfkeywords={polimeri coniugati, fotovoltaico, politiofene, carbazolo, tiofene, policarbazolo, fluorene, polifluorene, fenilenevinilene, perilene bisimmide, fullerene, polimeri a blocchi, rod-rod, rod-coil},pdftitle={Polimeri coniugati per applicazioni fotovoltaiche}} %metadati nel pdf
+
+
+\setbeamertemplate{navigation symbols}{} %per eliminare i bottoni della barra di navigazione in basso a destra
+\AtBeginSection[]{\frame{\tableofcontents[current,hideothersubsections]}} %indice all'inizio di ogni section, mostra solo le sottosezioni di quella sezione
+\newcommand{\nsub}[1]{\subsection{#1}\begin{frame}\frametitle{#1}} %scorciatoia per nuova diapo con nuova subsection
+
+
+\title[Polimeri coniugati per applicazioni fotovoltaiche]{Polimeri coniugati per applicazioni fotovoltaiche}
+\subtitle{Esame di Complementi di Chimica Macromolecolare.}
+\author{Ilario Gelmetti}
+\institute{Scuola Normale Superiore di Pisa.\\Professore Giancarlo Galli.}
+\date{12 ottobre 2011}
+\logo{\includegraphics[width=0.07\paperwidth]{img/snslogo.png}}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\input{sec1/intro.tex}
+\input{sec2/conj_pol.tex}
+\input{sec3/block_pol.tex}
+
+\setbeamertemplate{bibliography item}[text] %nella bibliografia in fondo ci mette i numeri invece del simbolo inutile del documento
+\begin{frame}[plain,shrink]{%spappola la bibliografia per farla stare in una sola diapo
+
+\begin{multicols}{2}
+{\tiny{\bibliographystyle{abbrv}
+\bibliography{Gelmetti-Sintesi_Polimeri_Coniugati.bib}
+}}}\end{multicols}
+\end{frame}
+\end{document}

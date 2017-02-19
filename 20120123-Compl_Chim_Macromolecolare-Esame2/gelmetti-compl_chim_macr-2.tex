@@ -1,0 +1,54 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{default}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage[style=chem-acs]{biblatex}
+\usepackage{leading}
+
+\usetheme{Warsaw}        % layout complessivo. 
+\useinnertheme{default} % layout interno.
+\useoutertheme{ilario1} % layout esterno.
+\usecolortheme{wolverine} % schema di colori.
+\usefonttheme{default}  % schema dei font.
+
+
+
+\hypersetup{pdfauthor={Ilario Gelmetti},pdfsubject={Plastiche self-healing - Self-healing plastics},pdfkeywords={polymers, plastic, self-healing, mendable, supramolecular},pdftitle={Self-healing plastics}} %metadati nel pdf
+
+\renewcommand{\thefootnote}{} %elimina il numerino della nota a piè di pagina
+\renewcommand\footnoterule{}
+\setbeamertemplate{navigation symbols}{}
+
+\AtBeginSection[]{\frame{\tableofcontents[current,hideothersubsections] \addtocounter{framenumber}{-1}}} %indice all'inizio di ogni section, mostra solo le sottosezioni di quella sezione
+
+\bibliography{gelmetti-compl_chim_macr-2}
+
+\title{Plastiche auto-riparanti}
+\subtitle{Esame di Complementi di Chimica Macromolecolare}
+\author{Ilario Gelmetti}
+\institute{Scuola Normale Superiore di Pisa.\\Professore Giancarlo Galli.}
+\date{23 gennaio 2012}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+
+
+\section{Introduzione}
+\input{intro/intro.tex}
+\section{Self-healing irreversibile con capsule}
+\input{irreversibile/irreversibile.tex}
+\section{Self-healing reversibile per legami non covalenti}
+\input{legame_h/legame_h.tex}
+\section{Self-healing reversibile per legami covalenti}
+\input{covalente/covalente.tex}
+\section{Self-healing per altri meccanismi}
+\input{altro/altro.tex}
+
+\end{document}

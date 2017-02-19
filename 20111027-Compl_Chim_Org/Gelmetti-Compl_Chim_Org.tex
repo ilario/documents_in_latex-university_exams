@@ -1,0 +1,51 @@
+\documentclass{beamer}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{default}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{textcomp} %per fare le frecce nel testo
+
+\renewcommand{\thefootnote}{} %elimina il numerino della nota a piè di pagina
+\renewcommand\footnoterule{} %elimina la riga prima della nota a piè di pagina
+
+\usetheme{Warsaw}        % layout complessivo. 
+\useinnertheme{default} % layout interno.
+\useoutertheme{default} % layout esterno.
+\usecolortheme{wolverine} % schema di colori.
+\usefonttheme{default}  % schema dei font.
+
+\hypersetup{pdfauthor={Ilario Gelmetti},pdfsubject={Chiralità ed amplificazione di chiralità in polimeri supramolecolari - Chirality in supramolecular polymers},pdfkeywords={chirality, chiral, polymers, supramolecular, amplification},pdftitle={Chiralita' ed amplificazione di chiralita' in polimeri supramolecolari}} %metadati nel pdf
+
+\setbeamertemplate{navigation symbols}{} %per eliminare i bottoni della barra di navigazione in basso a destra
+
+\AtBeginSection[]{\frame{\tableofcontents[current,hideothersubsections]}} %indice all'inizio di ogni section, mostra solo le sottosezioni di quella sezione
+
+\title[Chiralità in polimeri supramolecolari]{Chiralità ed amplificazione di chiralità\\ in polimeri supramolecolari}
+\subtitle{Esame di Complementi di Chimica Organica}
+\author{Ilario Gelmetti}
+\institute{Scuola Normale Superiore di Pisa.\\Professore Lorenzo Di Bari.}
+\date{27 ottobre 2011}
+\logo{\includegraphics[width=0.07\paperwidth]{snslogo.png}}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\input{sec0/supramol.tex}
+\input{sec1/chiral.tex}
+\input{sec2/monom.tex}
+\input{sec3/polim.tex}
+
+
+\setbeamertemplate{bibliography item}[text] %nella bibliografia in fondo ci mette i numeri invece del simbolo inutile del documento
+\begin{frame}[plain
+]
+{\tiny{\bibliographystyle{apalike}
+\bibliography{bib/compl_chim_org.bib}
+}}
+\end{frame}
+
+
+\end{document}

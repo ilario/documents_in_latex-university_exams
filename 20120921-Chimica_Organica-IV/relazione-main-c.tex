@@ -1,0 +1,264 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%   # # # # #                                                    # # # # #    %%%%%%%%%%
+%%%%%%%%%%%%  # # # #  Main file - Setup and organization of the document  # # # #  %%%%%%%%%%%%%
+%%%%%%%%%%   # # # # #                                                    # # # # #    %%%%%%%%%%
+%%%%%%%%%%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %%%%%%%%%%
+%%%%%%%%%%                                                                             %%%%%%%%%%
+%%%%%%%%%%   Configuration and main document for high quality reports and thesis of    %%%%%%%%%%
+%%%%%%%%%%   the Dipartimento di Chimica e Chimica Industriale of the Università di    %%%%%%%%%%
+%%%%%%%%%%   Pisa. Specifically thought and fixed for the compilation of synthetic     %%%%%%%%%%
+%%%%%%%%%%   reports. Handles notes and footnotes for tables; multiple objects and     %%%%%%%%%%
+%%%%%%%%%%   captions in one `figure` environment; captions sideways to the figures;   %%%%%%%%%%
+%%%%%%%%%%   numbering, subnumbering and referencing of compounds; easy typesetting    %%%%%%%%%%
+%%%%%%%%%%   of formulae and equations. Last modify by Andrea Leoncini and Ilario      %%%%%%%%%%
+%%%%%%%%%%   Gelmetti.                                                                 %%%%%%%%%%
+%%%%%%%%%%                                                                             %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\documentclass[a4paper, english, twoside, 12pt, openany]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% PACKAGE LIST %%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english]{babel}		% Library for hyphenations
+\usepackage[utf8]{inputenc}		% Specify input encoding (utf8x = Unicode UTF8 extended) utf8x non esiste più, provo utf8
+\usepackage{graphicx}			% Allows the use of attributes while definining graphics
+\usepackage{fancyhdr}			% Extensive control of page headers and footers in LaTeX2e
+%\usepackage{indentfirst}		% Make the first line of every section be indented
+\usepackage{booktabs}			% Contains additional commands to enhance the quality of tables
+\usepackage[bf, hang]{subfigure}	% Allows easy support for multiple objects and captioning inside a single environment. è deprecato, dovremmo provare subcaption
+\usepackage[bf, hang]{caption}		% Customization of captions looking
+\usepackage{chemnum}			% Package used to manage index of compounds and schemes
+\usepackage{ifpdf}			% Provides the switch /ifpdf (/ifpdf [things in pdf mode] /else [things in dvi mode] /fi)
+\usepackage[version=3]{mhchem} 		% Powerful typesetting of chemical formulae and equations (/ce{})
+\usepackage{enumitem}			% Controls layout of itemize, enumerate, description
+\usepackage{titlesec}			% Alternative section titles
+\usepackage{siunitx}			% Typesetting quantities in a consistent way
+\usepackage[numbers]{natbib}		% Flexyble bibliography support
+\usepackage[ragged, margincaption, centerbody] {sidecap}	% Captions sideways
+\usepackage{lipsum}
+\usepackage[final]{pst-pdf}	% this is the line to comment/uncomment when running the compilation of new pictures
+\usepackage{pdflscape}
+\usepackage[pdftex,pdfsubject={Synthesis of a Tropos Deoxycholic Acid Derived Binaphthyl Phosphite and Use as Chiral Ligand in the Rhodium Catalyzed Conjugate Addition of Phenylboronic Acid to Nitro Cyclohexene.},pdfkeywords={organic chemistry, boronic acid, conjugate addition, rhodium, asymmetric synthesis, nitro-cyclohexene, deoxycholic acid, phosphite, ligand},pdftitle={Report of Laboratory of Organic Chemistry IV},pdfauthor={Ilario Gelmetti},colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+%hyperref da fastidio alle prime compilazioni con latex
+
+
+%%%%%%%%%%%% NOTES ON PACKAGES %%%%%%%%%%%%%%%
+%  You use \cmpd+ to set the label. It will read the label from the file <jobname>.cmpd (supposing your main file is called <jobname>.tex). This means at least two, maybe more LATEX runs are necessary until all labels are set.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% NEW COMMANDS %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\fignoeps}{		% questo è il nuovo comando che ho scritto per fare il segnaposto alle figure mancanti
+\begin{figure}[h!]
+\begin{picture}(200,100)(0,0)
+\put(10,10){\dashbox{2}(180,80)}
+\end{picture}
+\caption{Figura non eps}
+\end{figure}}
+
+\newcommand{\noeps}{		% questo è il nuovo comando che ho scritto per fare il segnaposto alle figure mancanti
+\begin{picture}(200,100)(0,0)
+\put(10,10){\dashbox{2}(180,80)}
+\end{picture}
+}
+
+\newcommand{\D}{\discretionary{}{}{}}
+\newcommand{\n}{{\slshape n}}
+\newcommand{\p}{{\slshape p}}
+\newcommand{\Rs}{{\slshape R}}
+\newcommand{\rS}{{\slshape S}}
+\newcommand{\legante}{\sloppy(3$\alpha$,\D{}5$\beta$,\D{}12$\alpha$)-\D{}3-\D{}(acetyloxy)-\D{}12-\D{}[dinaphtho-\D{}[1,2-d:\D{}2',1'-f]-\D{}[1,3,2]\D{}dioxaphosphepin-\D{}14-\D{}yloxy]-\D{}cholan-\D{}24-oic acid\D{} methyl ester}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% GLOBAL SETUP %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cmpdsetup{cmpd-delim = ()}
+
+\captionsetup[SCfigure]{indention=-70pt}%\the\hangindent} sarebbe figo mettere \the\hangindent ma hangindent viene definito immagine per immagine e qui risulta essere zero. no way.
+\sidecaptionvpos{figure}{c} %caption di lato ad altezza al centro... boh
+
+
+		  %% commands to put titles of the paragraphs in the outermargin %%
+\titleformat{name=\paragraph,page=even}[leftmargin]{\bf\filouter
+%\normalfont\vspace{14pt}\sffamily\filleft
+}{\theparagraph}{0em}{}[]
+\titleformat{name=\paragraph,page=odd}[rightmargin]{\bf\filouter
+%\normalfont\vspace{14pt}\sffamily\filleft
+}{\theparagraph}{0em}{}[]
+\titlespacing*{\paragraph} {\the\marginparwidth}{3.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing{\paragraph}{15pc}{-0.5pc}{1pc}
+
+
+		  %% commands for the layout of the chaptertitle %%
+\newcommand{\bigrule}{\titlerule[0.5mm]}
+\titleformat{\chapter}[display]{\bfseries \Huge }{\vspace{-2in} %\titlerule \filleft \Large \chaptertitlename\ \Large\thechapter
+  }{0mm}{\filleft\Huge\thechapter. }[\vspace{0.5mm} \bigrule]  
+\titleformat{name=\chapter,numberless}[display]{\bfseries \Huge }{\vspace{-2in} %\titlerule \filleft \Large \chaptertitlename\ \Large\thechapter
+  }{0mm}{\filleft\Huge}[\vspace{0.5mm} \bigrule]
+
+
+\setlength{\captionmargin}{.10\textwidth}
+
+\setlength{\headheight}{27pt} %se uso 12pt per il corpo testo, fancyhdr me lo chiede
+
+
+
+\title{Report of Laboratory of Organic Chemistry IV
+%Relazioni di Laboratorio di Chimica Organica IV
+}
+
+\author{Gelmetti Ilario}%, Andrea Leoncini}
+\date{}% Remove command to get current date 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Setting up pagestyles for ``fancy'' (two sides)%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+
+\addtolength{\headwidth}{0.7cm}
+
+
+%\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{#1\ \thesection}}
+% \leftmark contiene l'argomento sinistro dell'ultimo \markboth della pagina, \rightmark contiene l'argomento destro del primo \markboth o l'unico argomento del primo markright sulla pagina.
+\lhead[\fancyplain{}{\textbf{\footnotesize{\leftmark}}}]{}
+\chead{}
+\rhead[]{\fancyplain{}{\textbf{\footnotesize{\rightmark}}}}
+\rfoot[\footnotesize{\slshape \footnotesize{\today}}]{\thepage}
+\cfoot[\footnotesize{Report of Org. Chem. IV. Lab. }]{}
+\lfoot[\thepage]{\footnotesize{\slshape Gelmetti Ilario}}%, Leoncini Andrea}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COVER %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+
+\addtolength{\hoffset}{23pt}
+\begin{titlepage}
+
+\begin{center}
+   	{\LARGE\textsc{University of Pisa}}\\\vspace{10pt}{\large\textsc{\makebox[100pt][c]{Faculty of Mathematical, Physical and Natural Sciences}%\makebox aggiunto per non far andare a capo la scritta, se avessi usato mbox non sarebbe stata al centro, la larghezza del box l'ho messa a caso.
+}}\\\vspace{5pt}
+   	{Department of Chemistry and Industrial Chemistry}\\
+		\rule{5cm}{1pt}\\	
+			\makebox[\textwidth]{\rule{0pt}{.22\textheight}}\\
+	\LARGE{\textsc{Report of Laboratory\\Organic Chemistry IV}}\\\rule{2cm}{1pt}\\
+\Large{%Sintesi del legante 3$\alpha$-acetilossi-12$\alpha$(2,2'-binaftil-1,1'-diilil)-fosfito-7-deossicolato di metile
+% fosfito contenente 2,2'-binaft-1,1'-diolo ed acido deossicolico %, preparazione del catalizzatore a base di rodio 
+%ed impiego nella reazione di addizione coniugata asimmetrica di acido~fenilboronico a nitrocicloesene.
+Synthesis of a \emph{Tropos} Deoxycholic Acid\\ Derived Binaphthyl Phosphite and Use as Chiral Ligand\\ in the Rhodium Catalyzed Conjugate Addition\\ of Phenylboronic Acid to Nitro Cyclohexene.}\\
+	\bigskip	
+		\makebox[.2\textwidth]{\rule{0pt}{.1\textheight}}\\
+\end{center}
+
+
+\vfill
+\begin{small}
+\makebox[\textwidth]{\rule{0pt}{.02\textheight}}\\
+	\begin{center}
+	\rule{3cm}{1pt}\\\vspace{10pt}
+	Laboratory group: {\LARGE Ilario Gelmetti, Andrea Leoncini}\\\vspace{5pt}
+	Laboratory report main author: {\LARGE Ilario Gelmetti}\\\vspace{5pt}
+	Co-Author: {\LARGE Andrea Leoncini}\\\vspace{5pt} 
+	Professor: {\LARGE Anna Iuliano}\\
+	\end{center}
+\end{small}
+
+\end{titlepage}
+
+\addtolength{\hoffset}{-23pt}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%% INDEX %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\tableofcontents
+
+\cleardoublepage
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%% Capitolo 1 %%%%%%%%%%%%%%%%%%%%%%
+\input{cap/intro.tex}
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%% Capitolo 2 %%%%%%%%%%%%%%%%%%%%%%
+\input{cap/procedura.tex}
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%% Capitolo 3 %%%%%%%%%%%%%%%%%%%%%%
+%\input{cap/caratterizzazione}
+%\newpage
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%% Capitolo 4 %%%%%%%%%%%%%%%%%%%%%%
+\input{cap/conclusioni.tex}
+\input{cap/sperimentale.tex}
+
+%\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{0.7} %aggiunto per far stare gli spettri uv e cd nella prima pagina del capitolo
+%\renewcommand{\textfraction}{.15}
+% \renewcommand{\floatpagefraction}{.66}
+% \renewcommand{\dbltopfraction}{.66}
+% \renewcommand{\dblfloatpagefraction}{.66}
+% \setcounter{topnumber}{9}
+\setcounter{bottomnumber}{2} %aggiunto per far stare gli spettri uv e cd nella prima pagina del capitolo
+% \setcounter{totalnumber}{20}
+% \setcounter{dbltopnumber}{9}
+
+\appendix
+\input{cap/spettri.tex}
+%\newpage
+
+
+%%%%%%%%%%%%%%%%%%%% Bibliografia %%%%%%%%%%%%%%%%%%%%%%
+%\input{Capitoli_Tesi/tesi_biblio}
+\bibliographystyle{unsrtnat}
+\bibliography{relazione.bib}
+\end{document}
+
+
+% ISTRUZIONI PER CHEMSCHEME
+% First you need to run the file through LATEX (not PDFLaTeX), with the line
+% \usepackage[final]{pst-pdf} commented so your package can make the 
+% replacements in the picture. Then you need another run through LATEX with
+% that line uncommented so that the modified pictures are extracted.
+% Do not worry that you end up with a very odd looking DVI! Then you have to
+% convert the extracted pictures to PDF by the following command
+
+% dvips -o \jobname-pics.ps \jobname.dvi; ps2pdf \jobname-pics.ps
+
+% This converts the modified graphics into PDF format. After this, you can use
+% PDFLATEX as normal for your schemes. Notice that you will have to repeat the
+% process if you need to modify the schemes or numbering in any way.
+
+
+% i comandi necessari per fare bene le immagini con i numeri
+% funzionano benissimo anche lanciandoli dal terminale di kile, risparmiando tempo
+%
+% dvips -o relazione-main-c-pics.ps relazione-main-c.dvi; ps2pdf relazione-main-c-pics.ps
+% 
+% oppure facendo un comandone solo: 
+% grep -v pst-pdf relazione-main-c.tex | grep -v relazione.bib | grep -v hyperref | latex ;  grep -v relazione.bib relazione-main-c.tex | grep -v hyperref | latex ; dvips -o relazione-main-c-pics.ps texput.dvi ; ps2pdf relazione-main-c-pics.ps ; grep -v hyperref relazione-main-c.tex | pdflatex; bibtex relazione-main-c.aux ; pdflatex relazione-main-c.tex
+% per l'ordinaria compilazione basta un solo passaggio con pdflatex, come al solito, c'è da fare 'sti casini quando c'è qualche immagine con chemnum che cambia o si aggiunge.

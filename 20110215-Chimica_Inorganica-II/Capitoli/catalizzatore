@@ -1,0 +1,124 @@
+\section[Complessi di Ru come catalizzatori dell'ossidazione]{Complessi di Rutenio come catalizzatori dell'ossidazione}
+\label{sec:oxcat}
+La reazione $\ce{2H2O} \rightarrow \ce{O2} + \ce{4H+}+ 4e^-$ è fortemente sfavorita avendo un $\Delta H\degree = 572$kJ/mol. 
+Considerando come primo passaggio la perdita di un elettrone e di un \ce{H+} (mostrata dalla Reazione \ref{eq:he}) si trova un potenziale di ossidazione di -2.4 V a pH = 7 ossia molto sfavorevole.
+\begin{equation} 
+\label{eq:he} \ce{H2O} \xrightarrow{-e^-, -\ce{H}^+} \cdot \ce{OH} 
+\end{equation}
+
+Anche considerando un meccanismo in cui si rompono 4 legami O-H (entalpia di legame = 463kJ/mol) e successivamente si formano i legami O-O (entalpia del doppio legame = 495kJ/mol) si capisce che il processo avrà una energia di attivazione enorme. Dunque è necessario utilizzare un catalizzatore che accoppi i passaggi svolgendo ossidazioni a più elettroni. Questi catalizzatori sono detti anche OEC (\emph{Oxygen Evolving Complex}).
+
+\subsection{Il sistema naturale}
+\paragraph{Il fotosistema II.} Le piante verdi, le alghe ed alcuni cianobatteri producono ossigeno molecolare usando l'acqua come sorgente di elettroni per la produzione di NADPH riducente e ATP utilizzando la fotosintesi. L'ossidazione a quattro elettroni dell'acqua negli organismi fotosintetici avviene su un cofattore inorganico legato ai polipeptidi del fotosistema II (PSII). Tutti questi organismi utilizzano grosso modo lo stesso catalizzatore il ché è indicativo della complessità e delicatezza del funzionamento di questo sistema naturale. Il nucleo di reazione è composto da quattro atomi di magnesio, uno di calcio ed un numero imprecisato di atomi di cloro, nessuna variazione di questa composizione è stata osservata (il calcio può essere sostituito da stronzio ottenendo una resa del 40\% inferiore in \ce{O2}). Il calcio sembra avere le funzioni di stabilizzatore del sito del magnesio, di ``cancello'' per il sito Mn e probabilmente (agendo come debole acido di Lewis) di ionizzatore di una molecola d'acqua per formare un OH nucleofilico\cite{calcio}\cite{reviewsintox}. I cloruri presenti sembrano servire sia come deboli leganti al sito Mn con la funzione di modificare il potenziale redox del complesso sia come leganti a ponte tra più Mn con la funzione di trasferitori di elettroni intracomplesso (i cloruri possono essere sostituiti da bromuri ma ottenendo minori rese in \ce{O2})\cite{reviewsintox}.   
+\paragraph{Il meccanismo.} Il nucleo di reazione e il meccanismo ipotizzato sono mostrati in \ref{fig:natura}. Una caratteristica essenziale del complesso PSII che gli permette di ossidare l'acqua ad una bassa sovratensione è la capacità di avere trasferimento di elettroni accoppiato allo scambio di protoni (\emph{proton-coupled electron transfer reactions} PCET). Questo ha un costo energetico minore delle reazioni indipendenti di ionizzazione e trasferimento di protone. L'energia richiesta può essere ancora minore se $e^-$, \ce{H+} e \ce{\cdot OH} vengono legati ad appositi siti sul catalizzatore\cite{calcio}.
+
+\begin{figure}
+\centering{\includegraphics[width=1\textwidth]{img/natura.png}}
+\caption{\footnotesize{Meccanismo proposto per l'ossidazione dell'acqua da parte del catalizzatore di ossidazione nel fotosistema II naturale. I siti evidenziati con un asterisco sono gli atomi da cui viene estratto un elettrone.}
+\label{fig:natura}}
+\end{figure}
+
+\paragraph{La degradazione.}Anche il fotosistema II, come i nostri catalizzatori di sintesi con leganti organici trattati nella Sezione \ref{sec:orgleg}, hanno problemi di degradazione: in media ogni 30 minuti il centro di reazione viene risintetizzato per ripristinare la funzionalità intaccata dall'azione dell'ossigeno di singoletto prodotto da dall'antenna fotosensibilizzatrice che può eccitare l'\ce{O2} appena prodotto\cite{making}. 
+
+
+
+
+\subsection{I catalizzatori sintetici}
+\subsubsection{Ossidi di Iridio}
+Tipicamente vengono utilizzate come catalizzatore dell'ossidazione nanoparticelle idratate di ossido di iridio \ce{IrO2}. Queste formano un colloide sulla cui superficie si può aggrappare un fotosensibilizzatore funzionalizzato con gruppi fosfato. Nonostante gli sforzi per minimizzare la dimensione delle nanoparticelle possa aumentarne l'efficienza questo sistema trova un collo di bottiglia nel lento trasferimento di elettroni. Inoltre la lentezza dell'ossido di iridio nel donare elettroni al fotosensibilizzatore eccitato (nell'ordine dei millisecondi) aumenta la degradazione del fotosensibilizzatore\cite{2010} e la probabilità di ricombinazione di cariche (cioè il ritorno allo stato fondamentale).  È stata ottenuta una resa quantica in ossigeno prodotto/fotone assorbito di $\Phi = 0.015$ in un sistema con l'ossido di iridio, fotoassorbitore [\ce{Ru}\{($\mu$-\ce{dpp)}\-\ce{Ru(bpy)}$_2$\}$_3]^{8+}$ (presentato nella Sezione \ref{sec:fotos}) ed accettore sacrificale di elettroni persolfato\cite{2009fotos}.
+\subsubsection{Complessi di Manganese}
+Inizialmente la comunità scientifica ha studiato complessi polinucleari di manganese (anche di cobalto ed iridio) per avere dei sistemi che mimassero il fotosistema II naturale. Questi studi non sono attendibili a causa del contributo alla produzione di ossigeno da parte della disproporzione dei perossidi utilizzati come ossidanti sacrificali. Successivamente degli studi su \ce{Mn4O4}-cubani (in cui ai vertici di un cubo si trovano Mn e O alternati) hanno impiegato un elettrodo con potenziale imposto per evitare le ambiguità derivanti dall'uso di perossidi. La barriera di attivazione che si osserva con questi complessi è sufficientemente bassa perché si ha cooperazione dei quattro centri Mn.
+
+\subsubsection{Complessi di Rutenio con leganti organici}
+\label{sec:orgleg}
+\paragraph{Il Rutenio.}Nella ricerca di nuovi catalizzatori ispirati al sistema biologico (vedi \ref{fig:natura}) analoghi a base di rutenio hanno grande importanza. Le caratteristiche che favoriscono l'impiego di Ru sono la facilità con cui questo elemento subisce reazioni redox accoppiate allo scambio di protoni (PCET, vedi \ref{fig:meccanismoru4}) ed i suoi molteplici stati di ossidazione accessibili in un piccolo intervallo di potenziale, grazie principalmente alla donazione $\sigma$ e $\pi$ dell'ossigeno\cite{meccanismo} (la retrodonazione dal Ru ai leganti bpm = 2,2'-bipirimidina o bpz = 2,2'-bipirazinao aumenta E\degree'(Ru$^{III/II}$) mentre il doppio legame con l'ossigeno diminuisce E\degree'(Ru$^{IV/III}$) \cite{making}). Esistono alcuni efficaci catalizzatori mononucleari (con un solo Ru) come \ce{Ru(tpy)(bpm)(OH2)^{2+}} e \ce{Ru(tpy)(bpz)(OH2)^{2+}} (bpm = 2,2'-bipirimidina; bpz = 2,2'-bipirazina; tpy = 2,2':6',2''-terpiridina) ma in questa ricerca verranno trattati solo due complessi mulinucleari. 
+
+\paragraph{Il Meyer's \emph{blue dimer.}}Il primo complesso di rutenio comparso in letteratura\cite{1982} è il Meyer's \emph{blue dimer}:  \emph{cis,cis}-\ce{[(bpy)2}\-\ce{(H2O)Ru^{III}(\mu -O)Ru^{III}(H2O)(bpy)2]^4+} che presenta una velocità di produzione di ossigeno 7 volte maggiori di quella per le nanoparticelle di \ce{IrO2}\cite{2009fotos}. Il legante bianionico ossido che fa da ponte tra i due atomi di Ru è responsabile dell'accoppiamento elettronico da cui le proprietà magnetiche (antiferromagnetiche a causa del superscambio), spettroscopiche ed elettrochimiche. 
+%La reazione complessiva che avviene al centro di \ce{RuORu} è: \ce{H2O-Ru^{III}-O-Ru^{III}-OH2 -4H^+ -4e^- \rightarrow O-Ru^V-O-Ru^V-O}
+
+\paragraph{Il meccanismo.}Una ipotesi di stadi presenti nell'ossidazione al centro di reazione del \emph{blue dimer} è illustrata in \ref{fig:blue}. 
+\begin{figure}
+\centering{\includegraphics[width=0.6\textwidth]{img/blue.png}}
+\caption{\footnotesize{Meccanismo proposto per il “blue dimer”. L'ossidante utilizzato per estrarre gli elettroni è Ce(IV). Tra le due vie alternative in basso viene percorsa quella più in alto se la quantità di ossidante è esatta, altrimenti in presenza di eccesso di ossidante viene percorsa la via più in basso. Le costanti di velocità sono espresse in M$^{-1}$s$^{-1}$ per k$_3$ e k$_5$ ed in s$^{-1}$ per k$_4$. I leganti bpy non sono disegnati.}
+\label{fig:blue}}
+\end{figure}
+
+ Nella reazione più sulla destra in \ref{fig:blue} si vede che la simmetria $C_2$ viene rotta: un Ru è responsabile della formazione del legame O-O con meccanismo di attacco nucleofilo dell'acqua (WNA \emph{water nucleophilic attack} illustrato in \ref{fig:wna}) mentre l'altro Ru è semplicemente un deposito di elettroni.
+\begin{figure}
+\centering{\includegraphics[width=0.6\textwidth]{img/wna.png}}
+\caption{\footnotesize{Una molecola di acqua solvente può partecipare o meno alla formazione del legame O-O. Le due principali vie di formazione del legame sono: attacco nucleofilo dell'acqua (\emph{solvent water nucleophilic attack} WNA) e interazione di due unità M-O (\emph{interaction of two M-O units} I2M)\cite{meccanismo}.}
+\label{fig:wna}}
+\end{figure}
+
+
+Una seconda ipotesi\cite{blue2} di meccanismo propone il coinvolgimento dei leganti bpy nella formazione del legame O-O come mostrato in \ref{fig:blue2}. Il complesso nello stato O=Ru$^V$-O-Ru$^V$=O viene attaccato da una molecola di acqua che si addiziona ad un anello piridile rendendo radicale il legante. A questo poi si addiziona un'ulteriore molecola d'acqua formando un $cis$-diidrossi-bpy. Infine sul diidrossido vicinale si ha trasferimento di idrogeni e formazione del legame O-O da cui infine deriva ossigeno e nuovamente il complesso iniziale chiudendo il ciclo catalitico.
+
+\begin{figure}
+\centering{\includegraphics[width=0.6\textwidth]{img/blue2.png}}
+\caption{\footnotesize{Meccanismo alternativo proposto per il “blue dimer”.}
+\label{fig:blue2}}
+\end{figure}
+
+\paragraph{La cinetica.}Per studiare questi sistemi spesso si usa Ce(IV) come accettore sacrificale di elettroni direttamente sul catalizzatore, cioè si semplifica il sistema eliminando il fotosensibilizzatore. La reazione netta che si ha è: $$\ce{4Ce(IV) + 2H2O}\rightarrow \ce{4Ce(III) + O2 + 4H^+}$$
+ 
+Lo stadio lento individuato in questo meccanismo non è l'ossidazione dell'acqua bensì si alternano due stadi lenti: l'ossidazione di \ce{Ru^{III}ORu^{IV}} per sinproporzione con \ce{Ru^{IV}ORu^{V}} e l'ossidazione di \ce{Ru^{IV}ORu^{V}} ($k_3$ in \ref{fig:blue}) da parte del Ce(IV) (utilizzato per estrarre elettroni al posto del fotosensibilizzatore)\cite{altrimolecolari}. Questo avviene perché il Ce(IV) ha una lenta cinetica di trasferimento elettronico. Si possono ottenere velocità maggiori (anche di 30 volte) aggiungendo un mediatore di trasferimento (ad esempio un complesso mononucleare di Ru come il fotosensibilizzatore \ce{[Ru(bpy)3]^2+)}\cite{making}. 
+
+Per questo complesso dopo pochi cicli si ha uno scambio dell'acqua legata con leganti anionici presenti in soluzione (detto all'inglese: \emph{anation}; al contrario di quando un legante acqua va a sostituire un anione legato al complesso: \emph{aquation})\cite{tetra} con conseguente perdita di attività.
+
+
+
+
+
+
+
+\subsubsection{Complessi di Rutenio con leganti inorganici}
+
+\paragraph{Il complesso.}Attualmente la ricerca sta utilizzando come catalizzatore di ossidazione un complesso con nucleo terarutenio(IV)-$\mu$-oxo e due robusti leganti inorganici poliossometallati $\gamma$-decatungstenosilicati:  \ce{[Ru4(\mu -O)4}\-\ce{(\mu -OH)2}\-\ce{(H2O)4}\-\ce{(\gamma -SiW10O36)2]^1^0-}. Il complesso ha simmetria $D_{2d}$ ed il nucleo \ce{Ru4O6^{4+}} ha struttura tipo adamantano. Da misure di lunghezza di legame e col ``metodo del legame di valenza'' (o somma di legami di valenza \emph{Bond Valence Sum} BVS) risulta un numero di ossidazione per il rutenio di 4.08 che implica l'essere monoprotonati per due dei sei ossigeni a ponte\cite{bvs}. Il legante OH a ponte è piegato e collega due atomi di Ru legati ad uno dei due leganti poliossometallati dando origine ad un legame ad H biforcato (a tre centri) con due ossigeni Si-O-W\cite{bvs}. 
+
+\paragraph{Perché inorganici?}Questo complesso presenta, rispetto ai precedenti catalizzatori i seguenti vantaggi:
+
+\begin{itemize}
+\item robustezza chimica (cioè assenza di degradazione anche su scale di tempo lunghe),
+\item affinità col catione del fotosensibilizzatore perché è un polianione,
+\item una cinetica veloce,
+\item il nucleo tetra-Ru(IV) $\mu$-oxo mima il catalizzatore naturale di ossidazione dell'acqua (vedi \ref{fig:natura}) compiendo quattro stadi di ossidazione prima di rilasciare ossigeno\cite{tetra}.  
+\end{itemize}
+
+\begin{figure}
+\centering{\includegraphics[width=0.9\textwidth]{img/sintesicat.png}}
+\caption{\footnotesize{Schema di sintesi per il \ce{Cs10[Ru4(\mu -O)4}\-\ce{(\mu -OH)2}\-\ce{(H2O)4(\gamma -SiW10O36)2]} descritto nel testo.}
+\label{fig:sintesicat}}
+\end{figure}
+
+
+
+\begin{figure}
+\centering{\includegraphics[width=0.8\textwidth]{img/disegnino.png}}
+\caption{\footnotesize{Schema di un esperimento con resa quantica $\Phi = 0.3$ in cui {\bf 1} = \ce{[Ru\{(\mu-dpp)}\-\ce{Ru(bpy)2\}3]^8+} e {\bf 2} = \ce{[Ru4(\mu -O)4}\-\ce{(\mu -OH)2}\-\ce{(H2O)4}\-\ce{(\gamma -SiW10O36)2]^1^0-} descritti nel testo.}
+\label{fig:disegnino}}
+\end{figure}
+
+
+\paragraph{Meccanismo del sistema.}In letteratura si trova lo schema di reazione del sistema in \ref{fig:disegnino} in cui si utilizza come fotosensibilizzatore \ce{[Ru\{(\mu-dpp)}\-\ce{Ru(bpy)2\}3]^8+} (dpp = 2,3-bis(2'-piridil)pirazina; bpy = 2,2'-bipiridina mostrato in \ref{fig:rudpprubpy}), come catalizzatore \ce{[Ru4(\mu -O)4}\-\ce{(\mu -OH)2}\-\ce{(H2O)4}\-\ce{(\gamma -SiW10O36)2]^1^0-} e come accettore sacrificale di elettroni (per simulare l'altra metà del sistema che dovrebbe produrre idrogeno) persolfato. Ecco lo schema:
+\begin{equation}
+FS + hv \rightarrow FS*\end{equation}\begin{equation}
+FS* + \ce{S2O8^2-} \rightarrow FS^+ + \ce{SO4^2-} + \ce{SO4-}\end{equation}\begin{equation}
+FS + \ce{SO4-} \rightarrow FS^+ + \ce{SO4^2-}\end{equation}\begin{equation}
+\label{eq:4} FS^+ + oxcat \rightarrow FS + oxcat^+\end{equation}\begin{equation}
+\label{eq:5} oxcat^{4+} + \ce{2H2O} \rightarrow oxcat + \ce{O2} + \ce{4H+} 
+\end{equation}
+La Reazione \ref{eq:5} avviene quando la Reazione \ref{eq:4} si è ripetuta 4 volte ossidando il catalizzatore a sufficienza per avere il processo multielettronico che produce ossigeno. La massima resa quantica\footnote{Resa quantica $\Phi$ = molecole di ossigeno prodotto/fotoni assorbiti.} ottenibile è $\Phi = 0.5$ perché dalle equazioni risulta che una molecola di ossigeno viene prodotta da due fotoni incidenti. In letteratura\cite{2010} si trova una resa quantica per questo processo di $\Phi = 0.3$ \label{resauao}con un irraggiamento a $\lambda = 550$nm. L'ottimizzazione del sistema per ottenere rese più alte consiste in un delicato aggiustamento di quantità di reagenti, forza ionica e pH. Si osserva una limitata degradazione del fotosensibilizzatore ad opera di radicali $\cdot$\ce{OH} formati dall'accettore sacrificale di elettroni persolfato\cite{radicali}. 
+
+\paragraph{Meccanismo di ossidazione del catalizzatore.}
+Il meccanismo con cui il catalizzatore perde i 4 elettroni è stato studiato utilizzando come ossidante diretto (cioè senza uso di fotosensibilizzatore) Ce(IV). L'ossidazione avviene in quattro stadi successivi che sono stati investigati per spettrometria UV-vis confrontata con studi computazionali DFT su \ce{[Ru4(\mu -O)4}\-\ce{(\mu -OH)2}\-\ce{(H2O)4Cl8]^2-} \footnote{sono stati utilizzati cloruri per simulare il poliossometallato, sistema troppo complesso per i calcoli}\cite{tetra}. 
+ \begin{figure}
+\centering{\includegraphics[width=0.75\textwidth]{img/meccanismoru4.png}}
+\caption{\footnotesize{Intermedi del \ce{[Ru4(\mu -O)4}\-\ce{(\mu -OH)2}\-\ce{(H2O)4}\-\ce{(\gamma-SiW10O36)2]^1^0-} coinvolti nel ciclo catalitico di ossidazione dell’acqua. Per semplicità di rappresentazione, viene rappresentato solo il cuore tetrarutenato.}
+\label{fig:meccanismoru4}}
+\end{figure}
+Il primo stadio porta la forma ridotta diamagnetica, che indicheremo con Ru$_4\{IV,IV,IV,IV\}$, alla prima forma ossidata Ru$_4\{V,IV,IV,IV\}$ paramagnetica (per esteso  \ce{[Ru^{V}(OH)Ru^{IV}3(H2O)3(\mu -O)4}\-\ce{(\mu -OH)2}\-\ce{(\gamma -SiW10O36)2]^1^0-} come si capisce da \ref{fig:meccanismoru4}) ad opera semplicemente dell'ossidazione dell'aria in ambiente acido. Aggiungendo un equivalente di Ce(IV) si forma Ru$_4\{V,V,IV,IV\}$ diamagnetico. L'aggiunta di altri 2 equivalenti di Ce(IV) porta alla formazione di Ru$_4\{V,V,V,IV\}$ paramagnetico. L'ultimo stato ossidato è più difficile da raggiungere infatti aggiungendo ulteriore Ce(IV) non si osservano variazioni nello spettro EPR. Questo stato a massima ossidazione potrebbe essere sia Ru$_4\{V,V,V,V\}$ che Ru$_4\{IV,VI,IV,VI\}$ (\ce{[Ru^{VI}2(O)2Ru^{IV}2}\-\ce{(H2O)2(\mu -O)4}\-\ce{(\mu -OH)2}\-\ce{(\gamma -SiW10O36)2]^1^0-}) entrambi risultano diamagnetici e di singoletto\cite{tetra} (da calcoli DFT) ma il primo risulta essere un po' più stabile. 
+\paragraph{Meccanismo di ossidazione dell'acqua.}
+Il Ru$_4\{V,V,V,V\}$ presenta siti Ru$^V$(OH) altamente elettrofilici su cui può avvenire un attacco nucleofilo di acqua diretto oppure attacco sul gruppo OH (WNA vedi \ref{fig:wna}). Il meccanismo alternativo di interazione di due unità M-O (I2M vedi \ref{fig:wna}) non è possibile a causa della rigidità strutturale di questo complesso. Anche ipotetici meccanismi bimolecolari (che coinvolgono due molecole di catalizzatore) sono da escludersi perché è stata osservata una cinetica del primo ordine per la produzione di ossigeno (è da escludersi anche per la carica negativa 10- dei complessi). Quindi si ipotizza la formazione di un intermedio perossido-rutenio RuOOH (simile allo stato {\bf $S_4'$} riportato nell'ipotesi di meccanismo per il fotosistema II a pagina 4476 dell'articolo \cite{ps2}). In letteratura non si trovano ipotesi di come il complesso nello stato Ru$_4\{V,V,V,V\}$ arrivi a dare \ce{Ru^{V}OOH} (e nemmeno la formazione di questa specie non è sicura) ma le possibilità con cui questo può avvenire sono svariate.
+Il rilascio di ossigeno da parte del perossido avviene velocemente in un unico stadio \ce{Ru^{V}OOH +H2O}$\rightarrow$ \ce{Ru^{III}(H2O) + O2 + H+ } piuttosto che passare per uno stato di transizione ad energia elevata schematizzabile in \ce{Ru^{V}OOH} $\xrightarrow{\ce{-H^+, -e^-}}$ \ce{Ru^{VI}OO} $\xrightarrow{\ce{H2O}}$ \ce{Ru^{IV}(H2O) + O2}\cite{meccanismo}.  È attualmente in studio la possibilità che venga rilasciato perossido di idrogeno in soluzione e che la dismutazione di questo venga poi catalizzata sempre dal complesso in oggetto\cite{meccanismo}.
+
+

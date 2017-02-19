@@ -1,0 +1,63 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}%uso utf8 invece di utf8x per poter mettere gli accenti nel titolo del pdf. Questo mi crea problemi con i °
+\usepackage{default}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{textcomp}%risolvo il problema col ° usando \textdegree e questo pacchetto
+
+
+\usetheme{Warsaw}        % layout complessivo. 
+\useinnertheme{default} % layout interno.
+\useoutertheme{default} % layout esterno.
+\usecolortheme{wolverine} % schema di colori.
+\usefonttheme{default}  % schema dei font.
+
+\hypersetup{pdfauthor={Ilario Gelmetti},pdfsubject={Synthesis and Reactivity of Silylformylation Products Derived from Terminal Alkynes},pdfkeywords={Alkynes, silanes, silylformylation, organic chemistry, organometallics, rearrangement, carbonylation, lactams, lactons, aldehydes, silylcarbocyclisation, desilylation, alpha-beta-unsaturated aldehydes, supported rhodium nanoparticles, metal vapour synthesis, catalysis},pdftitle={Sintesi e reattività dei prodotti di sililformilazione derivati da alchini terminali}}
+
+
+\setbeamertemplate{navigation symbols}{} %per eliminare i bottoni della barra di navigazione in basso a destra
+\AtBeginSection[]{\frame{\tableofcontents[current,hideothersubsections]}}
+\newcommand{\diapo}[1]{\subsection{#1}\begin{frame}\frametitle{#1}}
+
+
+\title[Sintesi e reattività dei prodotti di sililformilazione di alchini]{Sintesi e reattività dei prodotti di sililformilazione derivati da alchini terminali}
+\author{Ilario Gelmetti}
+\institute{Scuola Normale Superiore di Pisa}
+\date{20 maggio 2011}
+\logo{\includegraphics[width=0.07\paperwidth]{img/snslogo.png}}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\setbeamertemplate{footline}{%
+\leavevmode\hbox{%
+\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fill,rightskip=.3cm]{author in head/foot}%
+\usebeamerfont{author in head/foot}\insertshortauthor
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.6\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=1.1cm,rightskip=.3cm plus1fil]{title in head/foot}%
+\usebeamerfont{title in head/foot}\insertshorttitle
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=0.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+\usebeamerfont{author in head/foot}\insertframenumber /28
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+
+\input{sec/intro.tex}
+\input{sec/sintesi.tex}
+\input{sec/catalisi.tex}
+\input{sec/substrati.tex}
+
+\nocite{*}
+\begin{frame}[shrink]
+\bibliographystyle{plainnat}
+\bibliography{colloquio4.bib}
+\end{frame}
+
+\end{document}

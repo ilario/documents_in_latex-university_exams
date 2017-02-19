@@ -1,0 +1,10 @@
+\section{Conclusioni}
+I sistemi presentati in questa ricerca hanno già rese accettabili (vedi pagina \pageref{resauao}). La ricerca attuale mira ad ottimizzare i sistemi esistenti ed a svilupparne di nuovi, a cercare modalità di assemblaggio che aumentino l'efficienza della sensibilizzazione (ad esempio legando in un'unica molecola il fotosensibilizzatore ed il catalizzatore), a migliorare la collezione delle cariche per ridurre la ricombinazione (ad esempio legando il catalizzatore ad un nanotubo di carbonio a parete multipla) e a produrre celle in cui la produzione di ossigeno ed idrogeno avvengano in compartimenti separati per evitarne la ricombinazione. 
+
+In \ref{fig:cella} è riportato un esempio di cella fotolitica a cui è applicata una tensione di polarizzazione.
+
+\begin{figure}
+\centering{\includegraphics[width=0.9\textwidth]{img/cella.png}}
+\caption{\footnotesize{Possibile schema di una cella solare. L'ingrandimento nella parte centrale dell'immagine mostra il catalizzatore \ce{[Ru4(\mu -O)4(\mu -OH)2(H2O)4(\gamma -SiW10O36)2]^{10-}} supportato su un nanotubo di carbonio che funge da collettore con \ce{[Ru\{(\mu-dpp)Ru(bpy)2\}3]^8+}. Il sensibilizzatore è legato al \ce{TiO2} mediante gruppi fosfato.}
+\label{fig:cella}}
+\end{figure}

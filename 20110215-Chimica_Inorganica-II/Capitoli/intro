@@ -1,0 +1,29 @@
+\section[Introduzione]{Introduzione}
+
+\paragraph{Il problema energetico.}Il previsto esaurimento delle scorte mondiali facilmente accessibili di petrolio metterà inevitabilmente in crisi la produzione di materiali che da questo dipendono (plastiche, medicinali, reattivi chimici\ldots ). Quindi è necessario limitarne il consumo per scopi energetici ricercando fonti alternative per la produzione di energia elettrica.
+
+La necessità di queste nuove fonti energetiche chiama in causa il mondo della ricerca scientifica. Attualmente la maggior parte delle fonti alternative di produzione elettrica sono state ottimizzate, basti pensare all'eolico o all'idroelettrico, ma, si intuisce, queste fonti ``meccaniche'' difficilmente saranno sufficienti. 
+
+\paragraph{Usare l'energia del sole.}Se ci si chiede come utilizzare l'abbondante energia che ci viene irraggiata dal Sole solitamente si pensa alla produzione elettrica da costose celle fotovoltaiche. In questo campo molta ricerca è stata fatta anche su economici materiali compositi organico-inorganico; tuttavia l'opzione attualmente migliore sono le celle al silicio, materiale energeticamente molto costoso da purificare. 
+
+Un innovativo modo di sfruttare la luce solare è la fotolisi dell'acqua per produrre idrogeno ed ossigeno ed ottenendo un ottimo combustibile: la reazione di combustione di due molecole di idrogeno è esoergonica per $\Delta G\degree = -473$kJ/mol. 
+
+Inoltre un processo simile può essere utilizzato per produrre \ce{CH4} da \ce{CO2} e acqua.
+\begin{equation}
+ \label{eq:totale}\ce{2H2O} + 4 h \nu \rightarrow \ce{O2} + \ce{2H2} \end{equation}\begin{equation}
+ \ce{2H2O} + \ce{CO2} + 8 h \nu \rightarrow \ce{2O2} + \ce{CH4} \end{equation}
+
+\paragraph{Il sistema.}Per produrre idrogeno ed ossigeno con la fotosintesi artificiale devono avvenire una serie di eventi a livello nanoscopico: assorbimento della luce, trasferimento di un elettrone (accoppiato al trasferimento di un protone) tramite un gradiente di energia libera ed attivazione del processo catalitico riducente, ripristino della carica del fotoassorbitore con trasferimento di un elettrone dal complesso catalitico ossidante multielettronico. 
+
+Un sistema per la fotolisi dell'acqua è schematizzato in \ref{fig:schemagenerale}.
+\begin{figure}
+\centering{\includegraphics[width=0.8\textwidth]{img/schemagenerale.pdf}}
+\caption{\footnotesize{Schema generale di funzionamento del sistema di fotolisi dell'acqua. FS = fotosensibilizzatore, ossia l'antenna che assorbe l'energia luminosa eccitandosi; oxcat = catalizzatore dell'ossidazione dell'acqua; ridcat = catalizzatore della riduzione dell'acqua.}
+\label{fig:schemagenerale}}
+\end{figure}
+
+La metà di schema che catalizza la riduzione dell'acqua a produrre idrogeno è ad un buon livello di sviluppo mentre la parte dell'antenna fotosensibilizzatrice e, ancor più, il catalizzatore dell'ossidazione sono attualmente i passaggi problematici di questo processo\cite{collobottiglia} e, guarda caso, anche quelli trattati in questa ricerca.
+
+Attualmente sia come fotosensibilizzatori che come catalizzatori di ossidazione vengono utilizzati dei complessi di rutenio.
+
+

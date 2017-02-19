@@ -1,0 +1,91 @@
+\documentclass[a4paper, italian, twoside
+, 12pt
+]{article}
+\usepackage[italian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{eso-pic}
+\usepackage[dvips]{graphicx}%permette di includere immagini .EPS (ma se uso pdflatex non funge)
+\usepackage{fancyhdr}
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage[bf, hang]{subfigure}
+\usepackage[bf, hang]{caption}
+\usepackage{chemstyle}
+\usepackage[pdftex,pdfauthor={Ilario Gelmetti},pdfsubject={Complessi di Rutenio nella produzione fotolitica di idrogeno e ossigeno da acqua.},pdfkeywords={acqua, ossigeno, idrogeno, energie alternative, produzione, carburante, catalizzatori, chimica inorganica, fotosensibilizzatore, rutenio,complesso, legante, dendrimeri, fotoeccitazione, solare, rinnovabile, green, fotolisi, poliossometallati, ossidazione},pdftitle={Complessi di Rutenio nella produzione fotolitica di idrogeno e ossigeno da acqua.},colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref} %%metainformazioni
+%%%Didascalie
+
+\setlength{\captionmargin}{.10\textwidth}
+
+\newcommand\AlCentroPagina[1]{
+\AddToShipoutPicture*{\AtPageCenter{
+\makebox(0,0){\includegraphics
+[width=0.9\paperwidth]{#1}}}}}
+
+\setlength{\headheight}{27pt} %se uso 12pt per il corpo testo, fancyhdr me lo chiede
+
+\newcommand{\n}[1]{({\bf #1})}
+
+\title{Complessi di Rutenio nella produzione fotolitica di \ce{H2} e \ce{O2} da \ce{H2O}.}
+\author{Gelmetti Ilario}
+\date{}% Remove command to get current date 
+%\institute{Scuola Normale Superiore di Pisa}
+
+\begin{document}
+
+\setcounter{errorcontextlines}{\maxdimen}
+%\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Prima Pagina %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+
+\begin{center}
+   	\large{\textsc{Facoltà di Scienze Matematiche Fisiche e Naturali}}\\
+   	\large{{Dipartimento di Chimica e Chimica Industriale}}\\
+		\rule{5cm}{1pt}\\	
+			\makebox[\textwidth]{\rule{0pt}{.22\textheight}}\\
+	\LARGE{\textsc{Complessi di Rutenio\\nella produzione fotolitica di \\\ce{H2} e \ce{O2} da \ce{H2O}}}\\
+	\bigskip	
+		\makebox[.2\textwidth]{\rule{0pt}{.1\textheight}}\\
+\end{center}
+
+\vfill
+\begin{small}
+\makebox[\textwidth]{\rule{0pt}{.02\textheight}}\\
+	\begin{center}
+	\rule{3cm}{1pt}\\
+	\LARGE{Ilario Gelmetti}\\		
+	\end{center}
+\end{small}
+
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Seconda Pagina %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Setting up pagestyles for ``fancy'' (two sides)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\addtolength{\headwidth}{0.7cm}
+\lhead[\fancyplain{}{\textbf{\footnotesize{\leftmark}}}]{}
+\chead{}
+\rhead[]{\fancyplain{}{\textbf{\footnotesize{\rightmark}}}}
+\rfoot[\footnotesize{\slshape \footnotesize{06/02/2011}}]{\thepage}
+\cfoot[\footnotesize{Ricerca per Chimica Inorganica II}]{\footnotesize Rutenio e fotoossidazione dell'acqua.}
+\lfoot[\thepage]{\footnotesize{\slshape Gelmetti Ilario}}
+
+%%%%%%%%%%%%%%%%%%%%%%% Indice %%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%% Capitolo 1 %%%%%%%%%%%%%%%%%%%%%%
+\input{Capitoli/intro}
+%%%%%%%%%%%%%%%%%%%%%% Capitolo 2 %%%%%%%%%%%%%%%%%%%%%%
+\input{Capitoli/sensibilizzatore}
+%%%%%%%%%%%%%%%%%%%%%% Capitolo 3 %%%%%%%%%%%%%%%%%%%%%%
+\input{Capitoli/catalizzatore}
+%%%%%%%%%%%%%%%%%%%%%% Capitolo 4 %%%%%%%%%%%%%%%%%%%%%%
+\input{Capitoli/conclusioni}
+%%%%%%%%%%%%%%%%%%%% Bibliografia %%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{unsrt}
+\bibliography{inorganica2.bib}
+\end{document}
